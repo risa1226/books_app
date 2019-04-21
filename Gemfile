@@ -63,3 +63,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'rb-readline'
 gem 'carrierwave'
+gem 'rails-i18n'
