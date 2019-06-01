@@ -1,5 +1,13 @@
 class ApplicationController < ActionController::Base
-    before_action :set_locale
+  before_action :set_locale, :authenticate_user!
+
+  def after_sign_in_path_for(_resource)
+    books_path
+  end
+
+  def after_sign_out_path_for(_resource)
+    new_user_registration_path
+  end
 
   def set_locale
     I18n.locale = params[:locale] || I18n.default_locale
