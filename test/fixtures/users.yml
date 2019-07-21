@@ -2,3 +2,4 @@ user1:
   provider: "github"
   uid: "01"
   email: "user1@example.com"
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
